@@ -18,7 +18,8 @@ public class Principal {
         ManejoDeArchivos.crearArchivo(nombreArchivo);
         ManejoDeArchivos.escribirArchivo("prueba2.txt", "Hola, el barca para europa league, como vende humo la XAVINETA!!");
         ManejoDeArchivos.agregarArchivo("prueba2.txt", "Benzema va a ganar el balon de oro y messi no se lo va a poder robar");
-        ManejoDeArchivos.leerArchivo("prueba2.txt");
+        //ManejoDeArchivos.leerArchivo("prueba2.txt");
+        ManejoDeArchivos.leerArchivoPorPalabra("prueba2.txt");
         
     }
     

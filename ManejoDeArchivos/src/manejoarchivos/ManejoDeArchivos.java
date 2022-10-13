@@ -14,6 +14,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -81,4 +82,20 @@ public class ManejoDeArchivos {
         }
     }
     
+    public static void leerArchivoPorPalabra(String nombre){
+        File archivo = new File(nombre);
+        try {
+            Scanner entrada = new Scanner(archivo);
+            int cont =0;
+            //recorro el fichero hasta fin
+            while(entrada.hasNext()){
+                String palabra = entrada.next();
+                System.out.println(palabra);
+                cont = cont + 1;
+            }
+            System.out.println("Numero de palabras en mi fichero = "+cont);
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace(System.out);
+        }
+    }
 }
